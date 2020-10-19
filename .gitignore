@@ -3,3 +3,4 @@
 *.json
 /*/key.json
 my-k8s-275711-486c62df1b0a.json
+*.tfvars
