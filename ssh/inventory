@@ -1,6 +1,6 @@
 [webservers]
-webserver01 ansible_host=10.128.0.8
-webserver02 ansible_host=10.128.0.6
+web01 ansible_host=10.128.0.8
+web02 ansible_host=10.128.0.6
 
 [databases]
 db01 ansible_host=10.128.0.5
