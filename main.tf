@@ -17,12 +17,12 @@ resource "google_compute_firewall" "ssh-rule" {
     protocol = "tcp"
     ports = ["22"]
   }
-  target_tags = ["vm_instance_1", "vm_instance_2", "vm_instance_3"]
+  #target_tags = ["vm_instance_1", "vm_instance_2", "vm_instance_3"]
   source_ranges = ["0.0.0.0/0"]
 }
 
 resource "google_compute_instance" "vm_instance_1" {
-  name         = "master"
+  name         = "controle-node"
   machine_type = "f1-micro"
 
   boot_disk {
@@ -40,7 +40,7 @@ resource "google_compute_instance" "vm_instance_1" {
 }
 
 resource "google_compute_instance" "vm_instance_2" {
-  name         = "node1"
+  name         = "webserver1"
   machine_type = "f1-micro"
 
   boot_disk {
@@ -58,7 +58,7 @@ resource "google_compute_instance" "vm_instance_2" {
 }
 
 resource "google_compute_instance" "vm_instance_3" {
-  name         = "node2"
+  name         = "webserver2"
   machine_type = "f1-micro"
 
   boot_disk {
@@ -74,5 +74,25 @@ resource "google_compute_instance" "vm_instance_3" {
     }
   }
 }
+
+
+resource "google_compute_instance" "vm_instance_4" {
+  name         = "dbserver1"
+  machine_type = "f1-micro"
+
+  boot_disk {
+    initialize_params {
+      image = "centos-cloud/centos-7"
+    }
+  }
+
+  network_interface {
+    # A default network is created for all GCP projects
+    network = google_compute_network.vpc_network.self_link
+    access_config {
+    }
+  }
+}
+
 
 
