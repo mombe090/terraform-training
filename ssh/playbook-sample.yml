@@ -11,6 +11,6 @@
       user:
           name: "{{ username }}"
           password: test
-          uid: 4004
+          uid: "{{ uid }}"
           state: present
 
