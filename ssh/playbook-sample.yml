@@ -4,6 +4,7 @@
   become: true
   vars:
     username: yaya
+    uid: 4004
 
   tasks:
     - name: Create user
