@@ -1,6 +1,9 @@
+[controls]
+master ansible_host=23.236.62.70
+
 [webservers]
-web01 ansible_host=10.128.0.8
-web02 ansible_host=10.128.0.6
+web01 ansible_host=10.128.0.5
+web02 ansible_host=10.128.0.4
 
 [databases]
-db01 ansible_host=10.128.0.5
+db01 ansible_host=10.128.0.3
