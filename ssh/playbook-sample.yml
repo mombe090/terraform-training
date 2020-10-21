@@ -10,4 +10,3 @@
           password: test
           comment: "{{ username['uname']['desc'] }}"
           state: absent
-
