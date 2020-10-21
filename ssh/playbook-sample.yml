@@ -9,6 +9,6 @@
           name: "{{ username['uname']['name'] }}"
           password: test
           comment: "{{ username['uname']['desc'] }}"
-          uid: "{{ uid }}"
+          uid: 4004
           state: present
 
