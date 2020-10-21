@@ -15,7 +15,7 @@ resource "google_compute_firewall" "ssh-rule" {
   network = google_compute_network.vpc_network.name
   allow {
     protocol = "tcp"
-    ports = ["22"]
+    ports = ["22", "80"]
   }
   #target_tags = ["vm_instance_1", "vm_instance_2", "vm_instance_3"]
   source_ranges = ["0.0.0.0/0"]

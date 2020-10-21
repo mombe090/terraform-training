@@ -1,0 +1,13 @@
+---
+- name: Ensure that yaya user is present
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Create user
+        user:
+          name: yaya
+          password: test
+          uid: 4004
+          state: present
+
