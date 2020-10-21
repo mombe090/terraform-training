@@ -9,5 +9,5 @@
           name: "{{ username['uname']['name'] }}"
           password: test
           comment: "{{ username['uname']['desc'] }}"
-          state: present
+          state: absent
 
