@@ -2,15 +2,13 @@
 - name: Ensure that yaya user is present
   hosts: all
   become: true
-  vars:
-    username: yaya
-    uid: 4004
 
   tasks:
     - name: Create user
       user:
-          name: "{{ username }}"
+          name: "{{ username['uname']['name'] }}"
           password: test
+          comment: "{{ username['uname']['desc'] }}"
           uid: "{{ uid }}"
           state: present
 
