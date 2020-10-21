@@ -5,7 +5,7 @@
 
   tasks:
     - name: Create user
-        user:
+      user:
           name: yaya
           password: test
           uid: 4004
