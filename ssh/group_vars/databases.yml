@@ -4,3 +4,4 @@ username:
   uname:
     name: yaya
     desc: This is for real men
+    password: "{{ secret }}"

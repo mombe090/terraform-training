@@ -15,6 +15,6 @@
     - name: Create user
       user:
           name: "{{ username['uname']['name'] }}"
-          password: test
           comment: "{{ username['uname']['desc'] }}"
+          password: "{{ username['uname']['password'] }}"
           state: absent
