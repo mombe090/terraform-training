@@ -1,0 +1,13 @@
+- name: Testing Jinja Templation
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Deploying message of the day templating
+      template:
+        src: motd.j2
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: "0644"
+
