@@ -1,0 +1,11 @@
+---
+- name: Create New Users
+  hosts: databases
+  become: true
+
+  tasks:
+    - name: ensure that users are there
+      user:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ db_users }}"

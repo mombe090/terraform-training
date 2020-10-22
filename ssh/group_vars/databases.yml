@@ -5,3 +5,8 @@ username:
     name: yaya
     desc: This is for real men
     password: "{{ secret }}"
+
+db_users:
+  - test
+  - dev
+  - qa
