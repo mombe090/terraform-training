@@ -5,8 +5,8 @@
   tasks:
     - name: Deploying message of the day templating
       template:
-        src: motd.j2
-        dest: /etc/motd
+        src: host.an.j2
+        dest: /etc/hosts
         owner: root
         group: root
         mode: "0644"
